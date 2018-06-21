@@ -21,9 +21,15 @@ OBJ_NAME = $(SRC_NAME:.c=.o)
 
 OBJ = $(addprefix $(OBJ_PATH),$(OBJ_NAME))
 
-CPPFLAGS = -Iincs -Ilibft
-LDFLAGS = -Llibft
-LDLIBS = -lft
+CPPFLAGS = -Iincs \
+		   -Ilibft \
+		   -I ~/.brew/include/SDL2 \
+
+LDFLAGS = -Llibft \
+		  -L ~/.brew/lib \
+
+LDLIBS = -lft \
+		 -lSDL2 \
 
 all: $(NAME)
 
