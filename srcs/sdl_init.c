@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/20 22:25:30 by marvin            #+#    #+#             */
-/*   Updated: 2018/06/20 22:25:30 by marvin           ###   ########.fr       */
+/*   Updated: 2018/06/21 13:07:00 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ static void		window(t_visual *v)
 					"Wolf3D",
 					SDL_WINDOWPOS_UNDEFINED,
 					SDL_WINDOWPOS_UNDEFINED,
-					WIN_W,
-					WIN_H,
+					v->screen.width,
+					v->screen.height,
 					0)) == NULL)
 	{
         SDL_Log("Unable to create window: %s", SDL_GetError());
@@ -52,8 +52,8 @@ static void		texture(t_visual *v)
 	if ((v->texture = SDL_CreateTexture(v->renderer,
 					SDL_PIXELFORMAT_RGBA8888,
 					SDL_TEXTUREACCESS_TARGET,
-					WIN_W,
-					WIN_H)) == NULL)
+					v->screen.width,
+					v->screen.height)) == NULL)
 	{
 		SDL_Log("Unable to create texture: %s", SDL_GetError());
 		exit(-4);

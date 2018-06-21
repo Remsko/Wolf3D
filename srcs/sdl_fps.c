@@ -6,7 +6,7 @@
 /*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/21 11:45:15 by rpinoit           #+#    #+#             */
-/*   Updated: 2018/06/21 12:07:20 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/06/21 16:55:11 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	sdl_fps(unsigned int *last_time)
 
 	++fps;
 	current_time = SDL_GetTicks();
-	if (current_time >= *last_time + (unsigned int)1000)
+	if (current_time > (*last_time + (unsigned int)1000))
 	{
 		ft_putnbr(fps);
 		ft_putchar('\n');

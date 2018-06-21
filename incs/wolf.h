@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/20 21:25:42 by marvin            #+#    #+#             */
-/*   Updated: 2018/06/20 21:25:42 by marvin           ###   ########.fr       */
+/*   Updated: 2018/06/21 13:37:21 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,13 @@
 #include "SDL.h"
 #include "types.h"
 #include "proto.h"
+#include "math.h"
+#include	<stdio.h>
 
 # define WIN_W 1500
 # define WIN_H 900
+
+# define ERROR 0
+# define SUCCESS 1
 
 #endif
