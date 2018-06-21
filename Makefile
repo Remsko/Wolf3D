@@ -13,6 +13,7 @@ SRC_NAME = main.c \
 			sdl_loop.c \
 			sdl_draw.c \
 			sdl_event.c \
+			sdl_fps.c \
 
 SRC = $(addprefix $(SRC_PATH),$(SRC_NAME))
 

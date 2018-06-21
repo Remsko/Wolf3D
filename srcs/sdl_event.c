@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/20 22:34:00 by marvin            #+#    #+#             */
-/*   Updated: 2018/06/20 22:34:00 by marvin           ###   ########.fr       */
+/*   Updated: 2018/06/21 11:41:16 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	sdl_event(t_events *e)
 			e->options.exit = TRUE;
 		else if (event.key.keysym.sym == SDLK_ESCAPE)
 			e->options.exit = TRUE;
+		e->options.draw = FALSE;
 	}
 }
