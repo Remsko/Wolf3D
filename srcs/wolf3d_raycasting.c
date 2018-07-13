@@ -1,29 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wolf.h                                             :+:      :+:    :+:   */
+/*   wolf3d_raycasting.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/20 21:25:42 by marvin            #+#    #+#             */
-/*   Updated: 2018/07/13 16:01:09 by rpinoit          ###   ########.fr       */
+/*   Created: 2018/07/13 11:29:26 by rpinoit           #+#    #+#             */
+/*   Updated: 2018/07/13 16:02:06 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WOLF_H
-# define WOLF_H
-
-#include "libft.h"
-#include "SDL.h"
-#include "types.h"
-#include "proto.h"
-#include "math.h"
-#include	<stdio.h>
-
-# define WIN_W 2000
-# define WIN_H 1300
-
-# define ERROR 0
-# define SUCCESS 1
-
-#endif
+#include "wolf.h"
