@@ -16,6 +16,7 @@ SRC_NAME = main.c \
 			sdl_fps.c \
 			wolf3d_draw.c \
 			wolf3d_actions.c \
+			wolf3d_parser.c \
 
 SRC = $(addprefix $(SRC_PATH),$(SRC_NAME))
 

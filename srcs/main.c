@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/20 21:30:14 by marvin            #+#    #+#             */
-/*   Updated: 2018/07/13 15:05:02 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/07/15 16:05:53 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,15 @@ int     main(int ac, char **av)
 		++i;
 	}
 	e.map[5][5] = 1;
-	if (ac == 1)
+	if (ac == 2)
 	{
-		//if (parser(&e) == ERROR)
-		//	return (1);
+		if (wolf3d_parser(e.map, av[1]) == FALSE)
+			return (1);
 		sdl_init(&v);
 		sdl_loop(&e, &v);
 		sdl_destroy(&v);
 	}
 	else
-		printf("usage: %s", av[0]);
+		ft_putendl("usage: ./wolf3d <map path>");
 	return (0);
 }

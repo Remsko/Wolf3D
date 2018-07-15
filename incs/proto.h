@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   proto.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/20 23:34:03 by marvin            #+#    #+#             */
-/*   Updated: 2018/07/13 14:44:54 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/07/15 16:04:11 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include "wolf.h"
 
 /* PARSING */
+
+t_bool  wolf3d_parser(int **map, char *path);
 
 /* GRAPHICS */
 

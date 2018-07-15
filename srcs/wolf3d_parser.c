@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sdl_destroy.c                                      :+:      :+:    :+:   */
+/*   wolf3d_parser.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/20 22:32:22 by marvin            #+#    #+#             */
-/*   Updated: 2018/07/15 10:34:51 by rpinoit          ###   ########.fr       */
+/*   Created: 2018/07/15 15:55:52 by rpinoit           #+#    #+#             */
+/*   Updated: 2018/07/15 16:04:37 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf.h"
 
-void	sdl_destroy(t_visual *v)
+t_bool  wolf3d_parser(int **map, char *path)
 {
-	SDL_DestroyTexture(v->texture);
-	SDL_DestroyRenderer(v->renderer);
-	SDL_DestroyWindow(v->window);
-	SDL_Quit();
+    int fd;
+
+    if ((fd = open(path, O_RDONLY)) <= -1)
+        return (TRUE);
+    (void)map;
+    if (close(fd) == -1)
+        return (FALSE);
+    return (TRUE);
 }
