@@ -6,7 +6,7 @@
 /*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/20 23:34:03 by marvin            #+#    #+#             */
-/*   Updated: 2018/07/15 16:04:11 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/07/15 18:03:51 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 /* PARSING */
 
-t_bool  wolf3d_parser(int **map, char *path);
+t_bool  wolf3d_parser(t_map *map, char *path);
 
 /* GRAPHICS */
 

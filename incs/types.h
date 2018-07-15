@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   types.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/20 23:34:06 by marvin            #+#    #+#             */
-/*   Updated: 2018/07/13 16:44:08 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/07/15 18:02:34 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ typedef struct	s_screen
 	int			width;
 	int			height;
 }				t_screen;
+
+typedef struct	s_infos
+{
+	int			width;
+	int			height;
+}				t_infos;
 
 typedef struct	s_vector
 {
@@ -56,11 +62,17 @@ typedef struct  s_events
 	const unsigned char	*keys;
 }               t_events;
 
+typedef struct	s_map
+{
+	int		**array;
+	t_infos	infos;
+}				t_map;
+
 typedef struct  s_env
 {
 	t_events	events;
 	t_camera	cam;
-	int			**map;
+	t_map		map;
 }               t_env;
 
 #endif
