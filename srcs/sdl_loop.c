@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sdl_loop.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rpinoit <rpinoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/20 23:00:51 by marvin            #+#    #+#             */
-/*   Updated: 2018/07/15 10:30:59 by rpinoit          ###   ########.fr       */
+/*   Updated: 2018/07/15 19:21:14 by rpinoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void    sdl_loop(t_env *e, t_visual *v)
 	{
 		sdl_fps();
 		sdl_event(&e->events);
-		sdl_draw(v, &e->cam, e->map);
+		sdl_draw(v, &e->cam, e->map.array);
 		wolf3d_actions(e);
 	}
 }

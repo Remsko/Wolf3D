@@ -40,16 +40,16 @@ void	wolf3d_actions(t_env *e)
 	movespeed = rotspeed * 2.0;
 	if (e->events.keys[SDL_SCANCODE_UP] == TRUE)
 	{
-		if (e->map[(int)(e->cam.origin.x + e->cam.direction.x * movespeed)][(int)e->cam.origin.y] == 0)
+		if (e->map.array[(int)(e->cam.origin.x + e->cam.direction.x * movespeed)][(int)e->cam.origin.y] == 0)
 			e->cam.origin.x += (e->cam.direction.x * movespeed);
-		if (e->map[(int)e->cam.origin.x][(int)(e->cam.origin.y + e->cam.direction.y * movespeed)] == 0)
+		if (e->map.array[(int)e->cam.origin.x][(int)(e->cam.origin.y + e->cam.direction.y * movespeed)] == 0)
 			e->cam.origin.y += (e->cam.direction.y * movespeed);
 	}
 	else if (e->events.keys[SDL_SCANCODE_DOWN] == TRUE)
 	{
-		if (e->map[(int)(e->cam.origin.x - e->cam.direction.x * movespeed)][(int)e->cam.origin.y] == 0)
+		if (e->map.array[(int)(e->cam.origin.x - e->cam.direction.x * movespeed)][(int)e->cam.origin.y] == 0)
 			e->cam.origin.x -= (e->cam.direction.x * movespeed);
-		if (e->map[(int)e->cam.origin.x][(int)(e->cam.origin.y - e->cam.direction.y * movespeed)] == 0)
+		if (e->map.array[(int)e->cam.origin.x][(int)(e->cam.origin.y - e->cam.direction.y * movespeed)] == 0)
 			e->cam.origin.y -= (e->cam.direction.y * movespeed);
 	}
 	else if (e->events.keys[SDL_SCANCODE_LEFT] == TRUE)
